@@ -1,0 +1,27 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+//int errno= 0;
+int arg_index = 0;
+int env_index = 0;
+
+int main ( int argc, char * argv [ ] , char * envp [ ] )  {
+
+
+  for  ( arg_index = 0 ; arg_index <argc; arg_index ++ )
+    printf ( "argv [% d] =%s \n " , arg_index, argv [ arg_index ] ) ;
+
+  printf ( " \n " ) ;
+
+
+
+  while  (envp [ env_index ] != '\0')
+    {
+
+  printf ( "envp [% d] =%s \n " , env_index, envp [ env_index ] ) ;
+
+  env_index ++;
+}
+
+  return 0;
+};
